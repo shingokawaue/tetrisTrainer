@@ -9,15 +9,17 @@ public:
 	void setCursor(int row, int column) { cursorRow = row; cursorColumn = column; }
 	void setRow(int num) { cursorRow = num; }
 	void setColumn(int num) { cursorColumn = num; }
-	void upCursor();
-	void downCursor();
-	void leftCursor();
-	void rightCursor();
+    void upCursor(){ cursorRow = (cursorRow - 1) % rowNum;}
+    void downCursor(){cursorRow = (cursorRow + 1) % rowNum;}
+    void leftCursor(){cursorColumn = (cursorColumn - 1) % columnNum;}
+	void rightCursor(){cursorColumn = (cursorColumn + 1) % columnNum;}
+    //draw
 	void drawMenu();
 	//ƒƒjƒ…[’Ç‰Á
 	void addMenu(SelectableMenuElement element) {
 		menu.push_back(element);
-		cursorRow++;
+        if(element.getRow() > rowNum) rowNum = element.getRow();
+        if(element.getColumn() > columnNum) columnNum = element.getColumn();
 	}
 private:
 	vector<SelectableMenuElement> menu;

@@ -10,6 +10,12 @@ public:
 	//publicŠÖ”
 	virtual void drawWithSelectedJudgment(int _row, int _column)const;
 
+    int getRow()const{
+        return row;
+    }
+    int getColumn()const{
+        return column;
+    }
 protected:
 	const int row;
 	const int column;

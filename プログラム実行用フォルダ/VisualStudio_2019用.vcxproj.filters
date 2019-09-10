@@ -36,6 +36,15 @@
     <ClInclude Include="keyboard_input.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="joypad_input.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mouse_input.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="selectable_menu_element_with_value.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tetrisTrainer.cpp">
@@ -51,6 +60,15 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="keyboard_input.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="joypad_input.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mouse_input.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="selectable_menu_element_with_value.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

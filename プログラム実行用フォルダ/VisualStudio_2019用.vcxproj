@@ -157,19 +157,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="display_menu.cpp" />
+    <ClCompile Include="joypad_input.cpp" />
     <ClCompile Include="keyboard_input.cpp" />
+    <ClCompile Include="mouse_input.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="selectable_menu_element.cpp" />
+    <ClCompile Include="selectable_menu_element_with_value.cpp" />
     <ClCompile Include="tetrisTrainer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\プロジェクトに追加すべきファイル_VC用\DxLib.h" />
     <ClInclude Include="display_menu.h" />
     <ClInclude Include="game_input.h" />
+    <ClInclude Include="joypad_input.h" />
     <ClInclude Include="keyboard_input.h" />
     <ClInclude Include="menu_element.h" />
+    <ClInclude Include="mouse_input.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="selectable_menu_element.h" />
+    <ClInclude Include="selectable_menu_element_with_value.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

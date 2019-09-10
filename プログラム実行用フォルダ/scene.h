@@ -43,9 +43,12 @@ public:
 	}
 	//Accessor
 	int getCurrentMode()const { return currentMode; }
+    int getCurrentScene()const { return currentScene; }
 private:
 	int currentScene = MAIN_MENU;
 	vector<DisplayMenu*> dmenu;
 	int dmenuIndex = 0;//This will change at the same time you change the scene
+    //0:MAIN_MENU 1:
+    
 	int currentMode = MODE_MENU;
 };

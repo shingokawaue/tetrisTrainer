@@ -80,14 +80,20 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 		gi.update();
 
-		switch (scene.getCurrentMode()) {
-		case MODE_MENU:
-			if (gi.getMenuUp())
-				scene.upCursor();
-			else if (gi.getMenuDown())
-				scene.downCursor();
-			break;
-		}
+        switch (scene.getCurrentScene()){
+            case MAIN_MENU:{
+                switch (scene.getCurrentMode()) {
+                    case MODE_MENU:
+                        if (gi.getMenuUp())
+                            scene.upCursor();
+                        else if (gi.getMenuDown())
+                            scene.downCursor();
+                        break;
+                }
+            }//case MAIN_MENU
+                break;
+        }
+		
 
 
 

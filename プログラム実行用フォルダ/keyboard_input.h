@@ -15,8 +15,4 @@ private:
 	const int menuRendaFirstFrame;
 	const int menuRendaFrame;
 
-	bool menuUp = false;
-	bool menuDown = false;
-	bool menuRight = false;
-	bool menuLeft = false;
 };

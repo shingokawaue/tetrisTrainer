@@ -5,24 +5,24 @@ using namespace std;
 
 class DisplayMenu {
 public:
-	//アクセサ的なの
+	//constractor
+	DisplayMenu(int _scene) :scene(_scene) {};
+	//Methods like accessor
 	void setCursor(int row, int column) { cursorRow = row; cursorColumn = column; }
 	void setRow(int num) { cursorRow = num; }
 	void setColumn(int num) { cursorColumn = num; }
-    void upCursor(){ cursorRow = (cursorRow - 1) % rowNum;}
+    void upCursor(){ cursorRow = (cursorRow + (rowNum-1) ) % rowNum;}
     void downCursor(){cursorRow = (cursorRow + 1) % rowNum;}
-    void leftCursor(){cursorColumn = (cursorColumn - 1) % columnNum;}
+    void leftCursor(){cursorColumn = (cursorColumn + (rowNum - 1)) % columnNum;}
 	void rightCursor(){cursorColumn = (cursorColumn + 1) % columnNum;}
+	int getScene() { return scene; }
     //draw
 	void drawMenu();
-	//メニュー追加
-	void addMenu(SelectableMenuElement element) {
-		menu.push_back(element);
-        if(element.getRow() > rowNum) rowNum = element.getRow();
-        if(element.getColumn() > columnNum) columnNum = element.getColumn();
-	}
+	//add menu
+	void addMenu(SelectableMenuElement* element);
 private:
-	vector<SelectableMenuElement> menu;
+	const int scene;
+	vector<SelectableMenuElement*> menu;
 	int cursorRow = 0;
 	int cursorColumn = 0;
 	int rowNum;

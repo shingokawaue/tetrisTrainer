@@ -8,7 +8,7 @@
 #include <array>
 
 #include <iostream>
-
+#include <boost/version.hpp>
 
 using namespace std;
 
@@ -146,7 +146,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	DWORD  ret;
 
 	ret = GetPrivateProfileString("KEYCONFIG", "HardDrop_Keyboard", "localhost", buf, sizeof(buf), "設定ファイル/設定データ.ini");
-	WritePrivateProfileString
+	//WritePrivateProfileString
 	//■　　　　　　　■　■　　　　　■　■　　■■
 	//■　　　■　　　■　■　　　　　　　■　■　　■
 	//　■　■　■　■　　■　■■　　■　■　■■■■
@@ -286,8 +286,9 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		
 			DrawFormatStringToHandle(250, 5, GetColor(255, 255, 255),
 				Font02, "x:%d  y:%d", gi.getMX(), gi.getMY());//選択されていない時
-			DrawStringToHandle(350, 5, buf,GetColor(255, 255, 255),
-				Font02 );
+			DrawFormatStringToHandle(350, 5, GetColor(255, 255, 255),
+				Font02, "%d", BOOST_VERSION);
+			//DrawStringToHandle(350, 15, BOOST_VERSION,GetColor(255, 255, 255),Font02 );
 
 		if (ScreenFlip() != 0) {//裏画面を表画面に反映
 			break;

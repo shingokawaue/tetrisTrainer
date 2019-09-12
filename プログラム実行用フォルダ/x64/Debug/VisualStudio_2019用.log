@@ -1,3 +1,13 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (VisualStudio_2019用.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  display_menu.cpp
+  joypad_input.cpp
+  keyboard_input.cpp
+  mouse_input.cpp
+  scene.cpp
+C:\Users\singu\OneDrive\ドキュメント\tetrisTrainer\tetrisTrainer\プログラム実行用フォルダ\display_menu.cpp(18,12): warning C4267:  'return': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  selectable_menu_element.cpp
+  selectable_menu_element_with_value.cpp
   tetrisTrainer.cpp
+  コードを生成中...
+C:\Users\singu\OneDrive\ドキュメント\tetrisTrainer\tetrisTrainer\プログラム実行用フォルダ\scene.cpp(8,18): warning C4267:  '=': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
   VisualStudio_2019用.vcxproj -> C:\Users\singu\OneDrive\ドキュメント\tetrisTrainer\tetrisTrainer\プログラム実行用フォルダ\x64\Debug\terisTrainer.exe

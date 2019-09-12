@@ -9,10 +9,23 @@ public:
 		, fontHandle(_fontHandle) {}
 	~MenuElement() {}
 	//publicŠÖ”
-	void draw()const {
+	virtual void draw(int row,int column)const {
 		DrawStringToHandle(x, y, displayString, color, fontHandle);
 	}
-
+	virtual int getRow()const {
+		return -1;
+	}
+	virtual int getColumn()const {
+		return -1;
+	}
+	virtual int getWidth()const {
+		return -1;
+	}
+	virtual int getHeight()const {
+		return -1;
+	}
+	int getX() const { return x; }
+	int getY() const { return y; }
 protected:
 	const TCHAR* displayString;//•\¦‚·‚é•¶š—ñ
 	const int color;//•¶š—ñ‚Ì•`‰æF

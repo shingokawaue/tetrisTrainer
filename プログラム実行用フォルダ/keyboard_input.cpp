@@ -49,3 +49,19 @@ bool KeyboardInput::getMenuLeft() {
 	else
 		return false;
 }
+
+bool KeyboardInput::getMenuOk() {
+	if (
+		keyboardFrameState[KEY_INPUT_RETURN] == 1
+		)return true;
+	else
+		return false;
+}
+
+bool KeyboardInput::getMenuCancel() {
+	if (
+		keyboardFrameState[KEY_INPUT_ESCAPE] == 1
+		)return true;
+	else
+		return false;
+}

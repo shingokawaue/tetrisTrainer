@@ -9,6 +9,8 @@ public:
 	bool getMenuDown();
 	bool getMenuRight();
 	bool getMenuLeft();
+	bool getMenuOk();
+	bool getMenuCancel();
 private:
 	int keyboardFrameState[256];
 

@@ -8,14 +8,20 @@ public:
 		, int _y, int _width,int _height,int _color, int _fontHandle,int _row,int _column) : MenuElement(_displayString,_x,_y,_color,_fontHandle ),mouseWidth(_width),mouseHeight(_height),row(_row),column(_column) {}
 	~SelectableMenuElement() {}
 	//publicä÷êî
-	virtual void drawWithSelectedJudgment(int _row, int _column)const;
+	virtual void draw(int _row, int _column)const;
 
-    int getRow()const{
+    virtual int getRow()const{
         return row;
     }
-    int getColumn()const{
+    virtual int getColumn()const{
         return column;
     }
+	virtual int getWidth()const {
+		return mouseWidth;
+	}
+	virtual int getHeight()const {
+		return mouseHeight;
+	}
 protected:
 	const int row;
 	const int column;
